@@ -1,0 +1,138 @@
+<div class="auth-container">
+  <div class="auth-card">
+
+    <!-- Left section -->
+    <div class="welcome-section">
+      <div class="brand">
+        <span class="brand-icon">✦</span>
+        <span>LeaveFlow</span>
+      </div>
+
+      <div class="welcome-content">
+        <h1>Manage your time.<br>Work smarter.</h1>
+        <p>
+          A smarter way to manage employee leaves,
+          track requests and simplify HR operations.
+        </p>
+      </div>
+
+      <div class="welcome-footer">
+        © 2026 LeaveFlow. All rights reserved.
+      </div>
+    </div>
+
+    <!-- Right section -->
+    <div class="form-section">
+
+      <div class="form-header">
+        <h2>{{ isSignup ? 'Create Account' : 'Welcome Back!' }}</h2>
+        <p>
+          {{ isSignup
+          ? 'Create your account to get started.'
+          : 'Please enter your details to sign in.' }}
+        </p>
+      </div>
+
+      <!-- Role selection -->
+      <div class="role-selector">
+        <button type="button" [class.active]="selectedRole === 'Employee'" (click)="selectedRole = 'Employee'">
+          Employee
+        </button>
+
+        <button type="button" [class.active]="selectedRole === 'HR'" (click)="selectedRole = 'HR'">
+          HR
+        </button>
+      </div>
+
+      <form (ngSubmit)="submitForm()" #authForm="ngForm">
+        <!-- Email -->
+        <div class="form-group" *ngIf="!isSignup">
+          <label>Work Email</label>
+          <input type="email" name="email" [(ngModel)]="loginObj.emailId" placeholder="name@company.com" required email>
+        </div>
+
+        <!-- Password -->
+        <div class="form-group" *ngIf="!isSignup">
+          <label>Password</label>
+          <input type="password" name="password" [(ngModel)]="loginObj.password" placeholder="Enter your password"
+            required minlength="6">
+        </div>
+
+        <!-- employee ID for signup -->
+        <div class="form-group" *ngIf="isSignup">
+          <label>Employee ID</label>
+          <input type="number" name="employeeId" [(ngModel)]="newCreateReqObj.employeeId"
+            placeholder="Enter employee ID">
+        </div>
+
+        <!-- Name field for signup -->
+        <div class="form-group" *ngIf="isSignup">
+          <label>Employee Name</label>
+          <input type="text" name="employeeName" [(ngModel)]="newCreateReqObj.employeeName"
+            placeholder="Enter your full name" required>
+        </div>
+        <!-- contact No for signup -->
+        <div class="form-group" *ngIf="isSignup">
+          <label>Contact No</label>
+          <input type="text" name="contactNo" [(ngModel)]="newCreateReqObj.contactNo" placeholder="Enter your Gender"
+            required>
+        </div>
+        <!-- Email -->
+        <div class="form-group" *ngIf="isSignup">
+          <label>Email</label>
+          <input type="email" name="emailId" [(ngModel)]="newCreateReqObj.emailId" placeholder="name@company.com"
+            required email>
+        </div>
+
+        <!-- DeptId ID for signup -->
+        <div class="form-group" *ngIf="isSignup">
+          <label>Dept ID</label>
+          <input type="number" name="deptId" [(ngModel)]="newCreateReqObj.deptId" placeholder="Enter employee ID">
+        </div>
+
+        <!-- Password -->
+        <div class="form-group" *ngIf="isSignup">
+          <label>Password</label>
+          <input type="password" name="password" [(ngModel)]="newCreateReqObj.password"
+            placeholder="Enter your password" required minlength="6">
+        </div>
+        <!-- gender No for signup -->
+        <div class="form-group" *ngIf="isSignup">
+          <label>Gender No</label>
+          <input type="text" name="gender" [(ngModel)]="newCreateReqObj.gender" placeholder="Enter your Gender"
+            required>
+        </div>
+
+        <!-- Role for signup -->
+        <div class="form-group" *ngIf="isSignup">
+          <label>Role</label>
+          <input type="text" name="role" [(ngModel)]="newCreateReqObj.role" placeholder="Enter role Name" required>
+        </div>
+
+
+
+        <div class="forgot-password" *ngIf="!isSignup">
+          <a href="javascript:void(0)">Forgot Password?</a>
+        </div>
+
+        <button type="submit" class="submit-btn" [disabled]="authForm.invalid">
+          {{ isSignup ? 'Create Account' : 'Sign In' }}
+        </button>
+
+      </form>
+
+      <div class="switch-auth">
+        <span>
+          {{ isSignup
+          ? 'Already have an account?'
+          : "Don't have an account?" }}
+        </span>
+
+        <a href="javascript:void(0)" (click)="toggleAuth()">
+          {{ isSignup ? 'Login' : 'Sign Up' }}
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>

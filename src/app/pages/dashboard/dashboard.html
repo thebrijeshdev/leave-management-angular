@@ -1,0 +1,215 @@
+<div class="dashboard">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2 class="logo">LeaveFlow</h2>
+
+    <div class="role-box">
+      <label>Select Role</label>
+      <select>
+        <option>HR</option>
+        <option>Employee</option>
+      </select>
+    </div>
+
+    <nav>
+      <a class="active">Dashboard</a>
+      <a>Employees</a>
+      <a>Departments</a>
+      <a>Leave Requests</a>
+      <a>Settings</a>
+    </nav>
+
+    <div class="logout">
+      <a>Logout</a>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+
+    <!-- Header -->
+    <header class="header">
+      <div>
+        <h2>HR Dashboard</h2>
+        <p>Welcome back! Here's your organization overview.</p>
+      </div>
+
+      <div class="profile">
+        <div class="avatar">HR</div>
+        <div>
+          <strong>HR Admin</strong>
+          <small>Human Resources</small>
+        </div>
+      </div>
+    </header>
+
+    <!-- Statistics -->
+    <section class="stats">
+
+      <div class="stat-card">
+        <div class="stat-icon blue">👥</div>
+        <div>
+          <p>Total Employees</p>
+          <h2>120</h2>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon green">🏢</div>
+        <div>
+          <p>Departments</p>
+          <h2>8</h2>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon orange">📋</div>
+        <div>
+          <p>Pending Leaves</p>
+          <h2>15</h2>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon purple">✅</div>
+        <div>
+          <p>Approved Leaves</p>
+          <h2>42</h2>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Employee Management -->
+    <section class="content-card">
+
+      <div class="section-header">
+        <div>
+          <h3>Employee Management</h3>
+          <p>Manage all employees in your organization.</p>
+        </div>
+
+        <button class="primary-btn">+ Add Employee</button>
+      </div>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Employee ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Department</th>
+              <th>Role</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>EMP001</td>
+              <td>Rahul Sharma</td>
+              <td>rahul@gmail.com</td>
+              <td>IT</td>
+              <td>Developer</td>
+              <td>
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+              </td>
+            </tr>
+
+            <tr>
+              <td>EMP002</td>
+              <td>Priya Patel</td>
+              <td>priya@gmail.com</td>
+              <td>HR</td>
+              <td>HR Executive</td>
+              <td>
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+              </td>
+            </tr>
+
+            <tr>
+              <td>EMP003</td>
+              <td>Amit Kumar</td>
+              <td>amit@gmail.com</td>
+              <td>Finance</td>
+              <td>Accountant</td>
+              <td>
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </section>
+
+    <!-- Department Management -->
+    <section class="content-card">
+
+      <div class="section-header">
+        <div>
+          <h3>Department Management</h3>
+          <p>Manage departments and department heads.</p>
+        </div>
+
+        <button class="primary-btn">+ Add Department</button>
+      </div>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Department ID</th>
+              <th>Department Name</th>
+              <th>Department Head</th>
+              <th>Employees</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>DEP001</td>
+              <td>IT</td>
+              <td>Rahul Sharma</td>
+              <td>35</td>
+              <td>
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+              </td>
+            </tr>
+
+            <tr>
+              <td>DEP002</td>
+              <td>HR</td>
+              <td>Priya Patel</td>
+              <td>15</td>
+              <td>
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+              </td>
+            </tr>
+
+            <tr>
+              <td>DEP003</td>
+              <td>Finance</td>
+              <td>Amit Kumar</td>
+              <td>20</td>
+              <td>
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </section>
+
+  </main>
+</div>
